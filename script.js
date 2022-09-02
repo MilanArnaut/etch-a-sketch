@@ -52,6 +52,3 @@ clearButton.addEventListener('click', e => {
         item.style.backgroundColor = 'white';
     });
 });
-
-
-console.log(document.getElementsByClassName('main-section.grid-container'));
