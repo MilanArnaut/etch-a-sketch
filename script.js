@@ -48,6 +48,7 @@ range.addEventListener('change', e => {
 //clearing grid
 clearButton.addEventListener('click', e => {
     e.preventDefault();
+
     let gridItems = document.querySelectorAll('.main-section .grid-container .grid-item');
     gridItems.forEach(item => {
         item.style.backgroundColor = 'white';
@@ -83,3 +84,21 @@ colorButton.addEventListener('click', e => {
         });
     });
 });
+
+//rainbow mode 
+rainbowButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    let gridItems = document.querySelectorAll('.main-section .grid-container .grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('mouseenter', e => {
+            e.preventDefault();
+
+            let R = Math.floor(Math.random()*256);
+            let G = Math.floor(Math.random()*256);
+            let B = Math.floor(Math.random()*256);
+
+            item.style.backgroundColor = `rgb(${R},${G},${B})`;
+        });
+    });
+})
