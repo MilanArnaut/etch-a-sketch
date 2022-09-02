@@ -59,3 +59,27 @@ footer {
 .main-section .grid-container .grid-item {
     background-color: white;
 }
+
+.main-section .settings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#colorPicker {
+    border: none;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 50px;
+  }
+#colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 100%;
+}
+#colorPicker::-webkit-color-swatch-wrapper {
+    border: none;
+    border-radius: 100%;
+    padding: 0;
+}
