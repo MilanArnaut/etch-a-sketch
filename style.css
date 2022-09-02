@@ -1,6 +1,7 @@
  * {
     margin:0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -8,6 +9,7 @@
     --text: #feffff;
     --blck: #17252a;
     --ftrText: #def2f1;
+    --green: #2b7a78;
 }
 
 body {
@@ -54,6 +56,7 @@ footer {
     box-shadow: 0px 0px 14px 7px rgba(0,0,0,0.54);
     display: grid;
     grid-template-columns: repeat(16, auto);
+    background-color: white;
 }
 
 .main-section .grid-container .grid-item {
@@ -73,11 +76,13 @@ footer {
     width: 100px;
     height: 100px;
     margin-bottom: 50px;
-  }
+}
+
 #colorPicker::-webkit-color-swatch {
     border: none;
     border-radius: 100%;
 }
+
 #colorPicker::-webkit-color-swatch-wrapper {
     border: none;
     border-radius: 100%;
@@ -108,4 +113,19 @@ footer {
     height: 20px;
     margin-top: -7px;
     border-radius: 12px;
+}
+
+#rangeNumber {
+    font-size:22px;
+    color: var(--blck);
+}
+
+.main-section .settings button {
+    margin-top: 35px;
+    font-size: 18px;
+    width: 150px;
+    padding: 10px 30px;
+    background-color: var(--green);
+    color: var(--ftrText);
+    border-radius: 5px;
 }
