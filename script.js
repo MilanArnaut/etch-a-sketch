@@ -4,6 +4,7 @@ const container = document.querySelector('.main-section .grid-container');
 const eraseButton = document.querySelector('#eraseButton');
 const rainbowButton = document.querySelector('#rainbowButton');
 const clearButton = document.querySelector('#clearButton');
+const colorButton = document.querySelector('#colorButton');
 let size = 16;
 
 //First load to make grid items
@@ -50,5 +51,35 @@ clearButton.addEventListener('click', e => {
     let gridItems = document.querySelectorAll('.main-section .grid-container .grid-item');
     gridItems.forEach(item => {
         item.style.backgroundColor = 'white';
+    });
+});
+
+
+//erase pixels
+eraseButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    let gridItems =document.querySelectorAll('.main-section .grid-container .grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('mouseenter', e => {
+            e.preventDefault();
+
+            item.style.backgroundColor = 'white';
+        });
+    });
+});
+
+//back to color mode
+colorButton.addEventListener('click', e => {
+    e.preventDefault();
+
+    let gridItems = document.querySelectorAll('.main-section .grid-container .grid-item');
+    gridItems.forEach(item => {
+        item.addEventListener('mouseenter', e => {
+            e.preventDefault();
+
+            let colorPicker = document.querySelector('#colorPicker').value;
+            item.style.backgroundColor = `${colorPicker}`;
+        });
     });
 });
